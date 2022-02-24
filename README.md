@@ -1,3 +1,3 @@
 # projetoFarmacia
 
-* [Samuel Santos](https://github.com/Sam-Pina)
+* [Guilherme Petry](github.com/petry078/)
