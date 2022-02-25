@@ -28,22 +28,14 @@ public class Categoria {
 
 	@NotNull
 	@Size(min = 10, max = 500)
-	private String tipo_produto;
+	private String tipoProduto;
 
 	@NotNull
-	private boolean multiplayer;
+	private boolean comprimido;
 	
 	@OneToMany(mappedBy = "categoria",cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categoria")
 	private List<Produto> produto;
-
-	public List<Produto> getProduto() {
-		return produto;
-	}
-
-	public void setProduto(List<Produto> produto) {
-		this.produto = produto;
-	}
 
 	public long getId() {
 		return id;
@@ -61,21 +53,32 @@ public class Categoria {
 		this.setor = setor;
 	}
 
-	public String getTipo_produto() {
-		return tipo_produto;
+	public String getTipoProduto() {
+		return tipoProduto;
 	}
 
-	public void setTipo_produto(String tipo_produto) {
-		this.tipo_produto = tipo_produto;
+	public void setTipoProduto(String tipoProduto) {
+		this.tipoProduto = tipoProduto;
 	}
 
-	public boolean isMultiplayer() {
-		return multiplayer;
+	public boolean isComprimido() {
+		return comprimido=true;
 	}
 
-	public void setMultiplayer(boolean multiplayer) {
-		this.multiplayer = multiplayer;
+	public void setComprimido(boolean comprimido) {
+		this.comprimido = comprimido;
 	}
+
+	public List<Produto> getProduto() {
+		return produto;
+	}
+
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
+	}
+
+	
+	
 }
 
 
